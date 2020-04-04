@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F4942D0C-BBF8-4476-AC7A-F24E49798018}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PokemonMadjong</RootNamespace>
+    <AssemblyName>PokemonMadjong</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>PokemonMadjong.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>PokemonMadjong.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdDuplex.AdControl.Silverlight">
+      <HintPath>..\References\AdDuplex.AdControl.Silverlight.dll</HintPath>
+    </Reference>
+    <Reference Include="AdRotator">
+      <HintPath>..\References\AdRotator.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.AdMob.Ads.WindowsPhone7">
+      <HintPath>..\References\Google.AdMob.Ads.WindowsPhone7.dll</HintPath>
+    </Reference>
+    <Reference Include="InneractiveAdSDK">
+      <HintPath>..\References\InneractiveAdSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Advertising.Mobile, Version=6.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Microsoft.Advertising.Mobile.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Advertising.Mobile.UI, Version=6.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Microsoft.Advertising.Mobile.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL">
+      <HintPath>packages\SilverlightToolkitWP.4.2011.12.14\lib\sl4-windowsphone71\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="Microsoft.Xna.Framework" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics" />
+    <Reference Include="MobFox.Ads">
+      <HintPath>..\References\MobFox.Ads.dll</HintPath>
+    </Reference>
+    <Reference Include="Mogade.WindowsPhone">
+      <HintPath>..\References\Mogade.WindowsPhone.dll</HintPath>
+    </Reference>
+    <Reference Include="Mogade.WindowsPhone.Core">
+      <HintPath>..\References\Mogade.WindowsPhone.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SOMAWP7">
+      <HintPath>..\References\SOMAWP7.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml" />
+    <Reference Include="mscorlib.extensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Code\HeaderedContentControl.cs" />
+    <Compile Include="Code\HexColor.cs" />
+    <Compile Include="Code\MogadeHelper.cs" />
+    <Compile Include="Code\PatchItem.cs" />
+    <Compile Include="Code\Path.cs" />
+    <Compile Include="Code\PhoneApplicationStylePage.cs" />
+    <Compile Include="Code\SettingsData.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Game.xaml.cs">
+      <DependentUpon>Game.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\GameGrid.xaml.cs">
+      <DependentUpon>GameGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\GameOver.xaml.cs">
+      <DependentUpon>GameOver.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LeaderboardPage.xaml.cs">
+      <DependentUpon>LeaderboardPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LeaderboardScoreRow.xaml.cs">
+      <DependentUpon>LeaderboardScoreRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Content Include="Content\About\AboutStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AboutPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Game.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\GameGrid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\GameOver.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\LeaderboardPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\LeaderboardScoreRow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Content\19.png" />
+    <Resource Include="Content\20.png" />
+    <Resource Include="Content\21.png" />
+    <Resource Include="Content\22.png" />
+    <Resource Include="Content\23.png" />
+    <Resource Include="Content\24.png" />
+    <Resource Include="Content\25.png" />
+    <Resource Include="Content\26.png" />
+    <Resource Include="Content\27.png" />
+    <Resource Include="Content\28.png" />
+    <Resource Include="Content\29.png" />
+    <Resource Include="Content\30.png" />
+    <Resource Include="Content\31.png" />
+    <Resource Include="Content\32.png" />
+    <Resource Include="Content\33.png" />
+    <Resource Include="Content\34.png" />
+    <Resource Include="Content\35.png" />
+    <Resource Include="Content\36.png" />
+    <Resource Include="Content\43.png" />
+    <Resource Include="Content\44.png" />
+    <Resource Include="Content\39.png" />
+    <Resource Include="Content\40.png" />
+    <Resource Include="Content\41.png" />
+    <Resource Include="Content\42.png" />
+    <Resource Include="Content\37.png" />
+    <Resource Include="Content\45.png" />
+    <Resource Include="Content\46.png" />
+    <Resource Include="Content\38.png" />
+    <Resource Include="Content\47.png" />
+    <Resource Include="Content\Fon\fon1.png" />
+    <Resource Include="Content\Fon\fon2.png" />
+    <Resource Include="Content\Fon\fon5.png" />
+    <Resource Include="Content\Fon\fon6.png" />
+    <Content Include="Content\About\Data.xml" />
+    <Resource Include="Content\instruction_1angle.png" />
+    <Resource Include="Content\instruction_2angle.png" />
+    <Resource Include="Content\instruction_horizontal.png" />
+    <Resource Include="Content\instruction_P.png" />
+    <Resource Include="Content\Fon\arctic.jpg" />
+    <Content Include="icon173x173.png" />
+    <Content Include="icon200x200.png" />
+    <Content Include="icon2_173x173.png" />
+    <Content Include="icon2_200x200.png" />
+    <Content Include="icon2_62x62.png" />
+    <Content Include="icon2_99x99.png" />
+    <Content Include="icon62x62.png" />
+    <Content Include="icon99x99.png" />
+    <Resource Include="pokejongAdSettings.xml" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
+    <Resource Include="pokemon.png" />
+    <Resource Include="Content\0.png" />
+    <Resource Include="Content\1.png" />
+    <Resource Include="Content\10.png" />
+    <Resource Include="Content\11.png" />
+    <Resource Include="Content\12.png" />
+    <Resource Include="Content\13.png" />
+    <Resource Include="Content\2.png" />
+    <Resource Include="Content\3.png" />
+    <Resource Include="Content\4.png" />
+    <Resource Include="Content\5.png" />
+    <Resource Include="Content\6.png" />
+    <Resource Include="Content\7.png" />
+    <Resource Include="Content\8.png" />
+    <Resource Include="Content\9.png" />
+    <Resource Include="Content\14.png" />
+    <Resource Include="Content\15.png" />
+    <Resource Include="Content\16.png" />
+    <Resource Include="Content\17.png" />
+    <Resource Include="Content\18.png" />
+    <Content Include="SplashScreenImage.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>
